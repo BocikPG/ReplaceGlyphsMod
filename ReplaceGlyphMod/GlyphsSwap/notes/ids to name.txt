@@ -1,0 +1,211 @@
+DevoteeStart
+
+KeyUIID: 0 , English_Translation: GOD
+KeyUIID: 1 , English_Translation: NOT
+KeyUIID: 2 , English_Translation: DEATH/DEAD
+KeyUIID: 3 , English_Translation: ME
+KeyUIID: 4 , English_Translation: YOU
+KeyUIID: 5 , English_Translation: DEVOTEE
+KeyUIID: 6 , English_Translation: WARRIOR
+KeyUIID: 7 , English_Translation: PREACHER
+KeyUIID: 8 , English_Translation: LOVE/LIKE
+KeyUIID: 9 , English_Translation: OPEN
+KeyUIID: 10 , English_Translation: CLOSE
+KeyUIID: 11 , English_Translation: TALK
+KeyUIID: 12 , English_Translation: GO/PASS
+KeyUIID: 13 , English_Translation: SEE/LOOK
+KeyUIID: 14 , English_Translation: FIND
+KeyUIID: 15 , English_Translation: SEEK/WANT
+KeyUIID: 16 , English_Translation: HELP
+KeyUIID: 17 , English_Translation: KEY
+KeyUIID: 18 , English_Translation: DOOR
+KeyUIID: 19 , English_Translation: LENS
+KeyUIID: 20 , English_Translation: POT
+KeyUIID: 21 , English_Translation: UP/GREAT
+KeyUIID: 22 , English_Translation: GREETINGS
+KeyUIID: 23 , English_Translation: CHURCH
+KeyUIID: 24 , English_Translation: GARDEN
+KeyUIID: 25 , English_Translation: CEMETERY
+KeyUIID: 26 , English_Translation: ABBEY
+KeyUIID: 27 , English_Translation: MAN/HUMAN
+KeyUIID: 28 , English_Translation: PLANT
+KeyUIID: 29 , English_Translation: INSTRUMENT
+KeyUIID: 30 , English_Translation: MUSIC
+KeyUIID: 31 , English_Translation: FREE
+KeyUIID: 32 , English_Translation: POTION
+KeyUIID: 33 , English_Translation: MAKE/CREATE
+
+
+DevoteeEnd
+WarriorStart
+
+KeyUIID: 0 , English_Translation: LOVE
+KeyUIID: 1 , English_Translation: GO/PASS
+KeyUIID: 2 , English_Translation: CALL
+KeyUIID: 3 , English_Translation: WEAPON
+KeyUIID: 4 , English_Translation: WAIT
+KeyUIID: 5 , English_Translation: BOTTLE
+KeyUIID: 6 , English_Translation: BALANCE
+KeyUIID: 7 , English_Translation: CRATE
+KeyUIID: 8 , English_Translation: TROLLEY
+KeyUIID: 9 , English_Translation: DUTY
+KeyUIID: 10 , English_Translation: CHOSEN
+KeyUIID: 11 , English_Translation: FORTRESS
+KeyUIID: 12 , English_Translation: BIG
+KeyUIID: 13 , English_Translation: WARRIOR
+KeyUIID: 14 , English_Translation: IMPURE
+KeyUIID: 15 , English_Translation: INSTRUMENT
+KeyUIID: 16 , English_Translation: MOON
+KeyUIID: 17 , English_Translation: DEATH
+KeyUIID: 18 , English_Translation: NOT
+KeyUIID: 19 , English_Translation: SMALL
+KeyUIID: 20 , English_Translation: PLURAL
+KeyUIID: 21 , English_Translation: CARRY/POSSESS
+KeyUIID: 22 , English_Translation: LAY
+KeyUIID: 23 , English_Translation: PUSH
+KeyUIID: 24 , English_Translation: PROTECT
+KeyUIID: 25 , English_Translation: KEY
+KeyUIID: 26 , English_Translation: VESSEL
+KeyUIID: 27 , English_Translation: SUN
+KeyUIID: 28 , English_Translation: BELLMAN
+KeyUIID: 29 , English_Translation: TREASURE
+KeyUIID: 30 , English_Translation: MAKE/CREATE
+KeyUIID: 31 , English_Translation: MUSIC
+KeyUIID: 32 , English_Translation: FEAR
+KeyUIID: 33 , English_Translation: SCIENTIST
+KeyUIID: 34 , English_Translation: HELP
+KeyUIID: 35 , English_Translation: SEEK/WANT
+
+
+WarriorEnd
+BardStart
+
+KeyUIID: 0 , English_Translation: ME
+KeyUIID: 1 , English_Translation: YOU
+KeyUIID: 2 , English_Translation: MAN/HUMAN
+KeyUIID: 3 , English_Translation: BARD
+KeyUIID: 4 , English_Translation: WARRIOR
+KeyUIID: 5 , English_Translation: MONSTER
+KeyUIID: 6 , English_Translation: ASCEND
+KeyUIID: 7 , English_Translation: PLAY
+KeyUIID: 8 , English_Translation: GO/PASS
+KeyUIID: 9 , English_Translation: LOVE/LIKE
+KeyUIID: 10 , English_Translation: CARRY/POSSESS
+KeyUIID: 11 , English_Translation: BE
+KeyUIID: 12 , English_Translation: SEEK/WANT
+KeyUIID: 13 , English_Translation: FIND
+KeyUIID: 14 , English_Translation: BOOK
+KeyUIID: 15 , English_Translation: INSTRUMENT
+KeyUIID: 16 , English_Translation: BEAUTY
+KeyUIID: 17 , English_Translation: SAW
+KeyUIID: 18 , English_Translation: FIRE
+KeyUIID: 19 , English_Translation: HAMMER
+KeyUIID: 20 , English_Translation: PATH
+KeyUIID: 21 , English_Translation: COMPASS
+KeyUIID: 22 , English_Translation: WEAPON
+KeyUIID: 23 , English_Translation: MUSIC
+KeyUIID: 24 , English_Translation: COMEDY
+KeyUIID: 25 , English_Translation: BROTHER
+KeyUIID: 26 , English_Translation: PLIERS
+KeyUIID: 27 , English_Translation: IDIOT
+KeyUIID: 28 , English_Translation: FREE
+KeyUIID: 29 , English_Translation: NORTH
+KeyUIID: 30 , English_Translation: ABBEY
+KeyUIID: 31 , English_Translation: EAST
+KeyUIID: 32 , English_Translation: WEST
+KeyUIID: 33 , English_Translation: AGORA
+KeyUIID: 34 , English_Translation: FORTRESS
+KeyUIID: 35 , English_Translation: SOUTH
+KeyUIID: 36 , English_Translation: THEATRE
+KeyUIID: 37 , English_Translation: WINDMILL
+KeyUIID: 38 , English_Translation: GREETINGS
+KeyUIID: 39 , English_Translation: PLURAL
+KeyUIID: 40 , English_Translation: QUESTION
+KeyUIID: 41 , English_Translation: NOT
+
+
+BardEnd
+AlchemistStart
+
+KeyUIID: 0 , English_Translation: ME
+KeyUIID: 1 , English_Translation: YOU
+KeyUIID: 2 , English_Translation: ALCHEMIST
+KeyUIID: 3 , English_Translation: BARD
+KeyUIID: 4 , English_Translation: WARRIOR
+KeyUIID: 5 , English_Translation: FAIRY
+KeyUIID: 6 , English_Translation: MONSTER
+KeyUIID: 7 , English_Translation: BROTHER
+KeyUIID: 8 , English_Translation: TRANSFORM/TRANSFORMATION
+KeyUIID: 9 , English_Translation: FIND
+KeyUIID: 10 , English_Translation: CLOSE
+KeyUIID: 11 , English_Translation: OPEN
+KeyUIID: 12 , English_Translation: HELP
+KeyUIID: 13 , English_Translation: MAKE
+KeyUIID: 14 , English_Translation: SEEK/WANT
+KeyUIID: 15 , English_Translation: MINE
+KeyUIID: 16 , English_Translation: LIBRARY
+KeyUIID: 17 , English_Translation: LABORATORY
+KeyUIID: 18 , English_Translation: REFECTORY
+KeyUIID: 19 , English_Translation: COPPER
+KeyUIID: 20 , English_Translation: GOLD
+KeyUIID: 21 , English_Translation: SILVER
+KeyUIID: 22 , English_Translation: CARBON
+KeyUIID: 23 , English_Translation: PLURAL
+KeyUIID: 24 , English_Translation: NOT
+KeyUIID: 25 , English_Translation: FIRE
+KeyUIID: 26 , English_Translation: FEAR
+KeyUIID: 27 , English_Translation: DOOR
+KeyUIID: 28 , English_Translation: DEATH/DEAD
+KeyUIID: 29 , English_Translation: FORMULA
+KeyUIID: 30 , English_Translation: PLANT
+KeyUIID: 31 , English_Translation: BOOK
+KeyUIID: 32 , English_Translation: 0
+KeyUIID: 33 , English_Translation: 1
+KeyUIID: 34 , English_Translation: 2
+KeyUIID: 35 , English_Translation: 3
+KeyUIID: 36 , English_Translation: 4
+KeyUIID: 37 , English_Translation: 5
+KeyUIID: 38 , English_Translation: 6
+KeyUIID: 39 , English_Translation: 7
+KeyUIID: 40 , English_Translation: 8
+KeyUIID: 41 , English_Translation: 9
+
+
+AlchemistEnd
+AnchoritesStart
+
+KeyUIID: 0 , English_Translation: YOU
+KeyUIID: 1 , English_Translation: ME
+KeyUIID: 2 , English_Translation: PLURAL
+KeyUIID: 3 , English_Translation: NOT
+KeyUIID: 4 , English_Translation: GO
+KeyUIID: 5 , English_Translation: TALK
+KeyUIID: 6 , English_Translation: UP
+KeyUIID: 7 , English_Translation: FEAR
+KeyUIID: 8 , English_Translation: SEEK
+KeyUIID: 9 , English_Translation: GREETINGS
+KeyUIID: 10 , English_Translation: WAIT
+KeyUIID: 11 , English_Translation: HELP
+KeyUIID: 12 , English_Translation: MAKE/CREATE
+KeyUIID: 13 , English_Translation: DEAD
+KeyUIID: 14 , English_Translation: MAN/HUMAN
+KeyUIID: 15 , English_Translation: OPEN
+KeyUIID: 16 , English_Translation: DOOR
+KeyUIID: 17 , English_Translation: KEY
+KeyUIID: 18 , English_Translation: PEOPLE
+KeyUIID: 19 , English_Translation: TOWER
+KeyUIID: 20 , English_Translation: EXILE
+KeyUIID: 21 , English_Translation: US/WE
+KeyUIID: 22 , English_Translation: DIE
+KeyUIID: 23 , English_Translation: COME
+KeyUIID: 24 , English_Translation: CLIMB
+KeyUIID: 25 , English_Translation: DISREGARD
+KeyUIID: 26 , English_Translation: MY PEOPLE
+KeyUIID: 27 , English_Translation: PEOPLES
+KeyUIID: 28 , English_Translation: STRANGER
+KeyUIID: 29 , English_Translation: STOP
+KeyUIID: 30 , English_Translation: REVIVE
+KeyUIID: 31 , English_Translation: DOORS
+
+
+AnchoritesEnd
