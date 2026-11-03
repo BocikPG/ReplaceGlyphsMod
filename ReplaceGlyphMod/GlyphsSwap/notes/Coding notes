@@ -1,0 +1,4 @@
+LookRune - component attached to 3d rune
+
+CutoffUI - loop to fix, prefix get `goToLinkedPortal` if true, save it
+suffix :if curretn place inited - change on scene what you need. this.waitLaunchTransition <= 0 end of loop
