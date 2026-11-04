@@ -2,10 +2,10 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using ReplaceGlyphMod.GlyphSwap;
 using UnityEngine;
-using UnityEngine.UI;
+
+
+namespace ReplaceGlyphMod.GlyphSwap;
 
 public class GlyphHandler : MonoBehaviour
 {
@@ -17,17 +17,18 @@ public class GlyphHandler : MonoBehaviour
     public JournalLanguageUI AlchemistLanguage;
     public JournalLanguageUI AnchoritesLanguage;
 
+    public static GlyphHandler sSingleton;
+
     public void Awake()
     {
         StartCoroutine(nameof(Init));
+        sSingleton = this;
     }
 
     public IEnumerator Init()
     {
         while (GameController.GetInstance() == null || GameController.GetInstance().GetJournal() == null)
             yield return null;
-
-        gameObject.GetComponent<BulleUI>();
 
         Journal = GameController.GetInstance().GetJournal();
         DevoteeLanguage = Journal.devotLanguage;
@@ -38,16 +39,15 @@ public class GlyphHandler : MonoBehaviour
 
         SwapAllGlyphs();
 
+        CutoffUIPatch.OnNewPlace -= OnNewPlaceEventHandler;
         CutoffUIPatch.OnNewPlace += OnNewPlaceEventHandler;
-
     }
 
     private void OnNewPlaceEventHandler(object sender, EventArgs e)
     {
-        
+        SwapTerminalGlyphs();
 
     }
-
 
     private void SwapAllGlyphs()
     {
@@ -58,6 +58,12 @@ public class GlyphHandler : MonoBehaviour
         SwapGlyphs.SwapGlyphsSeedBased(AnchoritesLanguage.keys);
 
         SwapGlyphs.SwapBardeSpecialSprites(FindObjectsOfType<BulleUI>(true));
+    }
+
+    private void SwapTerminalGlyphs()
+    {
+        
+
     }
 
 }

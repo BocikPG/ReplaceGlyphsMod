@@ -3,6 +3,9 @@
 using System;
 using HarmonyLib;
 using ReplaceGlyphMod;
+using ReplaceGlyphMod.GlyphSwap;
+
+namespace ReplaceGlyphMod;
 
 [HarmonyPatch(typeof(CutoffUI), nameof(CutoffUI.Loop))]
 class CutoffUIPatch
@@ -24,11 +27,16 @@ class CutoffUIPatch
 	{
 		if (_placeIsLoading)
 		{
+			if(MainMenuButtonPatch.isInMenu)
+			{
+				GlyphHandler.sSingleton.Awake();
+			}
+
 			var placeController = GameController.GetInstance().GetPlaceController();
 
 			if (placeController.GetCurrentPlace().IsInit())
 			{
-				Plugin.Logger.LogInfo("CutoffUI place loaded: " + placeController.GetCurrentPlace().name);
+				Plugin.Logger.LogInfo("CutoffUI place loaded: " + placeController.GetCurrentPlace().gameObject.scene.name);
 				_placeIsLoading = false;
 
 				OnNewPlace?.Invoke(null, null);

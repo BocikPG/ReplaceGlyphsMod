@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using ReplaceGlyphMod.GlyphSwap;
 
 namespace ReplaceGlyphMod;
 
@@ -16,6 +17,7 @@ public class Plugin : BaseUnityPlugin
         Logger.LogInfo($"Plugin Replace Glyph Mod is loaded!");
 
         var harmony = new Harmony("bocik.plugins.replaceglyphmod");
+        harmony.PatchAll(typeof(TerminalLinkUIPatch).Assembly);
         harmony.PatchAll();
 
         

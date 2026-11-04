@@ -28,22 +28,24 @@ public static class SwapGlyphs
 
 	public static void SwapGlyphsSeedBased(JournalKeyUI[] jKeyUI)
 	{
-		string folder = SelectFolder(jKeyUI[0].GetLanguageType());
+		var langType = jKeyUI[0].GetLanguageType();
+		var smallSizeWidth = SelectSizeVector(TextureSize.SMALL, true);
+		var smallSizeHeight = SelectSizeVector(TextureSize.SMALL, false);
+		var largeSizeWidth = SelectSizeVector(TextureSize.LARGE, true);
+		var largeSizeHeight = SelectSizeVector(TextureSize.LARGE, false);
 
 		foreach (var key in jKeyUI)
 		{
 			RuneData runeData = key.GetRuneData();
 
-			string imagePathBase = Path.Combine(Paths.PluginPath, MOD_PATH, DATA_PACK_PATH, gameSeed.ToString(), folder);
-
-			string imagePathSmall = Path.Combine(imagePathBase, SMALL_SIZE, key.runeId + ".png");
-			string imagePathLarge = Path.Combine(imagePathBase, LARGE_SIZE, key.runeId + ".png");
+			string imagePathSmall = GetSpritePath(key.runeId, langType, TextureSize.SMALL);
+			string imagePathLarge = GetSpritePath(key.runeId, langType, TextureSize.LARGE);
 
 			try
 			{
-				ImageUtils.SetInGameSprite(imagePathSmall, key.GetRuneData(), "smallRune", 100, 100, 50f, 50f);
-				ImageUtils.SetInGameSprite(imagePathLarge, key.GetRuneData(), "largeRune", 252, 252, 126f, 126f);
-				ImageUtils.SetInGameSprite(imagePathLarge, key.GetRuneData(), "assignatedRune", 252, 252, 126f, 126f);
+				ImageUtils.SetInGameSprite(imagePathSmall, key.GetRuneData(), "smallRune", smallSizeWidth, smallSizeHeight, smallSizeWidth / 2f, smallSizeHeight / 2f, true);
+				ImageUtils.SetInGameSprite(imagePathLarge, key.GetRuneData(), "largeRune", largeSizeWidth, largeSizeHeight, largeSizeWidth / 2f, largeSizeHeight / 2f, true);
+				ImageUtils.SetInGameSprite(imagePathLarge, key.GetRuneData(), "assignatedRune", largeSizeWidth, largeSizeHeight, largeSizeWidth / 2f, largeSizeHeight / 2f, true);
 
 				Plugin.Logger.LogInfo($"Swapped {key.GetTranslation(I18nType.ENGLISH)}");
 			}
@@ -56,15 +58,53 @@ public static class SwapGlyphs
 
 	}
 
-	internal static void SwapBardeSpecialSprites(BulleUI[] bulleList)
-	{		
-		string leftImagePathBase = Path.Combine(Paths.PluginPath, MOD_PATH, DATA_PACK_PATH, gameSeed.ToString(), BARDS_FOLDER, BARD_SPECIAL_SIZE, "LeftSpecial.png");
-		string rightImagePathBase = Path.Combine(Paths.PluginPath, MOD_PATH, DATA_PACK_PATH, gameSeed.ToString(), BARDS_FOLDER, BARD_SPECIAL_SIZE, "RightSpecial.png");
+	public static void SwapGlyph(string spritePath, Image image, TextureSize size,bool cache = false)
+	{
 
-		foreach(var bulle in bulleList)
+
+		ImageUtils.SetInGameSprite(spritePath, image, size, cache);
+
+	}
+	public static void SwapGlyph(string runeName, LanguageType languageType, Image image, TextureSize size,bool cache = false)
+	{
+		SwapGlyph(GetSpritePath(runeName, languageType, size), image, size, cache);
+	}
+	public static void SwapGlyph(int runeId, LanguageType languageType, Image image, TextureSize size,bool cache = false)
+	{
+		SwapGlyph(runeId.ToString(), languageType, image, size, cache);
+	}
+
+	public static string GetSpritePath(int runeId, LanguageType languageType, TextureSize size)
+	{
+		return GetSpritePath(runeId.ToString(), languageType, size);
+	}
+	public static string GetSpritePath(string runeId, LanguageType languageType, TextureSize size)
+	{
+		return Path.Combine(Paths.PluginPath, MOD_PATH, DATA_PACK_PATH, gameSeed.ToString(), SelectFolder(languageType), SelectSize(size), runeId + ".png");
+	}
+
+	internal static void SwapBardeSpecialSprites(BulleUI[] bulleList)
+	{
+		string leftImagePathBase = GetSpritePath("LeftSpecial", LanguageType.BARDES, TextureSize.BARD_SPECIAL);
+		string rightImagePathBase = GetSpritePath("RightSpecial", LanguageType.BARDES, TextureSize.BARD_SPECIAL);
+
+		foreach (var bulle in bulleList)
 		{
-			ImageUtils.SetInGameSprite(leftImagePathBase, bulle.leftBarde, 20, 100, 10f, 50f);
-			ImageUtils.SetInGameSprite(rightImagePathBase, bulle.rightBarde, 20, 100, 10f, 50f);
+			ImageUtils.SetInGameSprite(leftImagePathBase, bulle.leftBarde, 20, 100, 10f, 50f, true);
+			ImageUtils.SetInGameSprite(rightImagePathBase, bulle.rightBarde, 20, 100, 10f, 50f, true);
+		}
+
+		Plugin.Logger.LogInfo($"Swapped Bard's front and end in this scene");
+	}
+	internal static void SwapBardeSpecialSprites(TerminalBulleUI[] bulleList)
+	{
+		string leftImagePathBase = GetSpritePath("LeftSpecial", LanguageType.BARDES, TextureSize.BARD_SPECIAL);
+		string rightImagePathBase = GetSpritePath("RightSpecial", LanguageType.BARDES, TextureSize.BARD_SPECIAL);
+
+		foreach (var bulle in bulleList)
+		{
+			ImageUtils.SetInGameSprite(leftImagePathBase, bulle.leftBarde, 20, 100, 10f, 50f, true);
+			ImageUtils.SetInGameSprite(rightImagePathBase, bulle.rightBarde, 20, 100, 10f, 50f, true);
 		}
 
 		Plugin.Logger.LogInfo($"Swapped Bard's front and end in this scene");
@@ -88,4 +128,49 @@ public static class SwapGlyphs
 		}
 		return "";
 	}
+
+	private static string SelectSize(TextureSize size)
+	{
+		switch (size)
+		{
+			case TextureSize.SMALL:
+				return SMALL_SIZE;
+			case TextureSize.LARGE:
+				return LARGE_SIZE;
+			case TextureSize.BARD_SPECIAL:
+				return BARD_SPECIAL_SIZE;
+		}
+
+		return "";
+	}
+	public static int SelectSizeVector(TextureSize size, bool getWidth)
+	{
+		switch (size)
+		{
+			case TextureSize.SMALL:
+				if (getWidth)
+					return 100;
+				else
+					return 100;
+			case TextureSize.LARGE:
+				if (getWidth)
+					return 252;
+				else
+					return 252;
+			case TextureSize.BARD_SPECIAL:
+				if (getWidth)
+					return 20;
+				else
+					return 100;
+		}
+
+		return 0;
+	}
+}
+
+public enum TextureSize
+{
+	SMALL,
+	LARGE,
+	BARD_SPECIAL
 }
